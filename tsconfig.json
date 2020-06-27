@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "lib": ["es6", "ES2017", "ES2018", "dom"],
+        "moduleResolution": "node",
+        "noEmit": true,
+        "strict": true,
+        "target": "es6",
+        "baseUrl": ".",
+        "rootDir": ".",
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "typeRoots": ["./types", "./node_modules/@types"]
+    },
+    "exclude": ["node_modules"]
+}
