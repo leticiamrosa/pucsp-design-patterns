@@ -1,20 +1,26 @@
 {
-    "compilerOptions": {
-        "allowJs": true,
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "isolatedModules": true,
-        "lib": ["es6", "ES2017", "ES2018", "dom"],
-        "moduleResolution": "node",
-        "noEmit": true,
-        "strict": true,
-        "target": "es6",
-        "baseUrl": ".",
-        "rootDir": ".",
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "resolveJsonModule": true,
-        "typeRoots": ["./types", "./node_modules/@types"]
-    },
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["es6"],
+    "allowJs": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@database/*": ["./src/database/*"],
+      "@controllers/*": ["./src/app/controllers/*"],
+      "@models/*": ["./src/app/models/*"],
+      "@config/*": ["./src/config/*"]
+    }
+  },
+  "include": ["src/**/*"]
 }

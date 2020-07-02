@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import mongoConfig from 'src/config/mongo';
+import 'src/database/index';
 
 class App {
   public server: express.Application;
@@ -13,24 +13,11 @@ class App {
     this.mongoose = mongoose;
 
     this.middlewares();
-    this.database();
   }
 
   private middlewares(): void {
     this.server.use(express.json());
     this.server.use(cors());
-  }
-
-  private database(): void {
-    this.mongoose.connect(
-      `mongodb://${mongoConfig.username}:${mongoConfig.password}@${mongoConfig.host}:${mongoConfig.port}/${mongoConfig.database}`,
-      {
-        useNewUrlParser: true,
-        useUnifiedTopology: false,
-        useCreateIndex: true,
-        useFindAndModify: false,
-      },
-    );
   }
 }
 
