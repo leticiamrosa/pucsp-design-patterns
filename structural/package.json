@@ -5,10 +5,11 @@
   "author": "Leticia Monteiro <leticiamonteiro.design@gmail.com> (https://leticiamrosa.github.io/)",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node index.ts"
+    "dev": "npx ts-node index.ts"
   },
   "devDependencies": {
     "@types/node": "^14.0.24",
+    "nodemon": "^2.0.4",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   }
