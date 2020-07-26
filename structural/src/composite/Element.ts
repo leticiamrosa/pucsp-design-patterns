@@ -16,6 +16,11 @@ export default class Element {
     return this;
   };
 
+  public addElement(element: any): any {
+    this.elements.push(element)
+    return this;
+  }
+
   public addAttributes(key: string, value: string): any {
     this.attributes.push({ key, value });
     return this;
@@ -31,6 +36,7 @@ export default class Element {
     return `<${this.elementType}>`;
   }
 
+  // design pattern composite
   public toHtml(): string {
     if (this.content) {
       return `${this.getInitialHtmlTag()}${this.content}</${this.elementType}>`

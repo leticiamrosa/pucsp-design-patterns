@@ -6,9 +6,11 @@ export default class InlineElement extends Element {
     this.displayType = 'inline';
   };
 
+  // design pattern decorator
   public addElement(element: any): any {
-    this.elements.push(element)
-    return this;
+    if(this.displayType !== 'inline') {
+      throw new Error('Is not allow to add a block element inside of inline element');
+    }
+    return super.addElement(element);
   }
-
 }
