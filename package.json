@@ -4,5 +4,10 @@
   "main": "index.js",
   "repository": "https://github.com/leticiamrosa/pucsp-design-patterns.git/",
   "author": "Leticia Monteiro <leticiamonteiro.design@gmail.com> (https://leticiamrosa.github.io/)",
+  "scripts": {
+    "ex1": "cd creational && yarn install && yarn dev",
+    "ex2": "cd structural && yarn install && yarn dev",
+    "ex3": "cd behavioral && yarn install && yarn dev"
+  },
   "license": "MIT"
 }
