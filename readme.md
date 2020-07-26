@@ -2,7 +2,7 @@
 
 ## Setup
 
-    Yarn install
+    yarn install
 ---
 ### Run Exercises
 Exercise creational
