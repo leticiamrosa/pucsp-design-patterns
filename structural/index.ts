@@ -1,8 +1,8 @@
-import Bold from './src/decorator/ContentsElements/Bold';
-import Italic from './src/decorator/ContentsElements/Italic';
-import Span from './src/decorator/ContentsElements/Span';
-import Anchor from './src/decorator/ContentsElements/Anchor';
-import Paragraph from './src/decorator/ContentsElements/Paragraph';
+import Bold from './src/composite/ContentsElements/Bold';
+import Italic from './src/composite/ContentsElements/Italic';
+import Span from './src/composite/ContentsElements/Span';
+import Anchor from './src/composite/ContentsElements/Anchor';
+import Paragraph from './src/composite/ContentsElements/Paragraph';
 
 
 class Facade {
