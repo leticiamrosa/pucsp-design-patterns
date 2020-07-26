@@ -1,25 +1,52 @@
-import Bold from './src/decorator/Contents/Bold';
-import Italic from './src/decorator/Contents/Italic';
-import Span from './src/decorator/Contents/Span';
+import Bold from './src/decorator/ContentsElements/Bold';
+import Italic from './src/decorator/ContentsElements/Italic';
+import Span from './src/decorator/ContentsElements/Span';
+import Anchor from './src/decorator/ContentsElements/Anchor';
+import Paragraph from './src/decorator/ContentsElements/Paragraph';
+
 
 class Facade {
   public constructor () {
-    this.print();
+    this.printContent();
+    this.printParagraph();
   };
 
-  public print(): void {
-    const bold = new Bold();
-    const italic = new Italic();
-    const span = new Span();
+  public printContent(): void {
 
-    const result = bold.addElement(
-      italic.addElement(
-        span.addContent('oi')
+    const result = Bold().addElement(
+        Italic()
+          .addElement(
+            Span().addContent('oi')
+          )
+            .addAttributes(
+              "class",
+              "banana"
+            )
+    ).toHtml();
+
+    return console.log('this is a print content', result);
+  };
+
+  public printParagraph(): void {
+
+    const result = Paragraph().addElement(
+      Anchor("http://google.com.br").addElement(
+        Bold().addElement(
+          Italic()
+            .addElement(
+              Span().addContent('oi')
+            )
+            .addAttributes(
+              "class",
+              "banana"
+            )
+        )
       )
     ).toHtml();
 
-    return console.log(result);
+    return console.log('this is a print paragraph', result);
   }
 }
+
 
 export default new Facade();
