@@ -4,7 +4,7 @@ import Span from './src/composite/ContentsElements/Span';
 import Anchor from './src/composite/ContentsElements/Anchor';
 import Paragraph from './src/composite/ContentsElements/Paragraph';
 
-
+// design pattern facade
 class Facade {
   public constructor () {
     this.printContent();
